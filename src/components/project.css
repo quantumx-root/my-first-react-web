@@ -1,0 +1,72 @@
+.project-box {
+  height: 500px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 100px auto;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  position: relative;
+}
+.main-project {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid black;
+  overflow: auto;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.slider {
+  display: flex;
+  width: calc(250px * 18);
+  gap: 20px;
+  animation: rotatebox 20s linear infinite;
+}
+.slide {
+  height: 400px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid black;
+  perspective: 100px;
+  transition: all 0.4s ease-in;
+}
+
+.slide::before,
+.slide::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.slide::before {
+  left: 0;
+  top: 0;
+}
+.slide::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.main-project-box-rotate {
+  width: 100%;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+@keyframes rotatebox {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}

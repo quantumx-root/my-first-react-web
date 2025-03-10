@@ -1,0 +1,134 @@
+.box{
+    position: relative;
+    background: #1c1c1c;
+    height: 500px;
+    width: 400px;
+    border-radius: 10PX;
+    overflow: hidden;
+    margin-top: 50px;
+
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    top: -50%;
+    left: -50%;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    top: -50%;
+    left: -50%;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom  right;
+    animation-delay: -5s;
+    
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
+.form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    
+    inset: 2px;
+    z-index: 10;
+    border-radius: 10px;
+    padding: 20px 30px;
+    background: #28292d;
+
+}
+.form h2{
+    text-align: center;
+    letter-spacing: 0.09em;
+    font-weight: bolder;
+    color: #45f3ff;
+}
+
+.inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+.inputbox input{
+    position: relative;
+    padding: 20px 10px 10px;
+    width: 100%;
+    z-index: 12;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+.inputbox span{
+    position: absolute;
+    color: #8f8f8f;
+    left: 0px;
+    padding: 5px 10px 10px;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.inputbox input:valid~span,
+.inputbox input:focus~span{
+    transform: translateY(-35px);
+    font-size: 0.7em;
+    color: #45f3ff;
+}
+
+.inputbox i{
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background: #45f3ff;
+    pointer-events: none;
+    border-radius: 10px;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.5s;
+}
+
+.inputbox input:valid~i,
+.inputbox input:focus~i{
+    height: 44px;
+}
+
+.link{
+    display: flex;
+    
+    margin-top: 30px;
+}
+
+input[type="submit"]{
+    border: none;
+    outline: line;
+    width: 100px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    background: #45f3ff;
+    font-size: 1em;
+    color: #23242a; /* Button text color fixed */
+}
+input[type="submit"]:active{
+    opacity: 0.8;
+}
