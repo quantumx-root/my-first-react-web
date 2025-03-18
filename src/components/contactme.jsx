@@ -17,7 +17,7 @@ function Loginpage() {
   return (
     <div className="box">
       <div className="form">
-        <h2>Sign in</h2>
+        <h2>Contact Me</h2>
         {["Email", "Number", "Password"].map((label, index) => (
           <div
             className={`inputbox ${activeBox === index ? "active" : ""}`}

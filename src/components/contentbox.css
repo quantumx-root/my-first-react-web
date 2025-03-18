@@ -1,5 +1,4 @@
-
-.main-box{
+.main-box {
   width: 100%;
   position: relative;
 }
@@ -55,7 +54,7 @@
   align-items: center;
   flex-direction: column;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
- 
+  overflow: auto;
 }
 
 .sub-name {
@@ -71,7 +70,6 @@
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   overflow: hidden;
-  
 }
 
 .progress {
@@ -80,7 +78,7 @@
   box-shadow: 0 0 10px rgb(10, 177, 163);
 }
 
-.orogressclass{
+.orogressclass {
   width: 95%;
   display: flex;
   justify-content: center;
@@ -89,17 +87,17 @@
   font-weight: bolder;
   color: white;
 }
-.name-sub{
+.name-sub {
   height: 20px;
   width: 57px;
   overflow: hidden;
 }
-#python{
+#python {
   font-size: 13px;
 }
-#backend{
+#backend {
   font-size: 13px;
 }
-#mongobd{
+#mongobd {
   font-size: 12px;
 }

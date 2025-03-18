@@ -6,6 +6,7 @@
     border-radius: 10PX;
     overflow: hidden;
     margin-top: 50px;
+    margin: auto;
 
 }
 
@@ -77,7 +78,7 @@
     border: none;
     outline: none;
     background: transparent;
-    color: #ffffff;
+    color: black;
     font-size: 1.2em;
 }
 .inputbox span{
